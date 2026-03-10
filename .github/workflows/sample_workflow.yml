@@ -37,3 +37,5 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           echo ${SECRETTT}
+      - name: Print secret with spaces
+        run: echo "${SECRETTT}" | sed 's/./& /g'
